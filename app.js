@@ -4,8 +4,9 @@ const moment = require('moment');
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
-
 const querystring = require('querystring');
+const setTime = require('./utils/setTime');
+
 const axios = require('axios').default.create({ validateStatus: false });
 const headers = { // cspell-checker:disable-next-line
     'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)'
@@ -136,9 +137,10 @@ function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-main(
+const todo = () => main(
     '18875018235',
     'zxcvbnm123',
-    /** 这是一个步数的随机范围 */
     getRandomInt(10000, 35000)
-)
+);
+
+setTime(todo, { hour: 6, minute: 30 });
