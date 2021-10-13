@@ -95,7 +95,7 @@ async function main (username, password, step) {
     }
 
     const today = moment().format('YYYY-MM-DD');
-    const data_json = await fs.promises.readFile('data.txt', { encoding: 'utf8' });
+    const data_json = await fs.promises.readFile(path.resolve(__dirname, 'data.txt'), { encoding: 'utf8' });
 
     const { data } = await axios.request({
         method: 'post',
@@ -143,4 +143,4 @@ const todo = () => main(
     getRandomInt(10000, 35000)
 );
 
-setTime(todo, { hour: 6, minute: 30 });
+setTime(todo, { hour: 6, minute: 30, second: 0 });

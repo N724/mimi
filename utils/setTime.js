@@ -10,7 +10,7 @@ function setRegular(todo=() => {}, targetTime={ hour: 0, minute: 0, second: 0 },
   const timeInterval = targetSeconds > nowSeconds ? targetSeconds - nowSeconds: targetSeconds + interval - nowSeconds;
   setTimeout(() => { 
     getProductFileList(todo, interval * 1000);
-    console.log(`现在是${targetTime.hour}:${targetTime.minute}`);
+    console.log(`现在是${nowTime.toLocaleString()}`);
   }, timeInterval * 1000);
 };
   
