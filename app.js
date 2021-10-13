@@ -143,4 +143,5 @@ const todo = () => main(
     getRandomInt(10000, 35000)
 );
 
+console.log('开始走起');
 setTime(todo, { hour: 6, minute: 30, second: 0 });
