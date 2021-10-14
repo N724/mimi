@@ -140,7 +140,7 @@ function getRandomInt (min, max) {
 const todo = () => main(
     '18875018235',
     'zxcvbnm123',
-    getRandomInt(10000, 35000)
+    getRandomInt(7000, 35000)
 );
 
 console.log('开始走起');
