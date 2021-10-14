@@ -145,7 +145,7 @@ const todo = () => main(
 
 console.log('开始走起');
 setInterval(() => {
-    console.log('跑哟。。。。');
+    console.log(`跑哟。。。。${new Date().toLocaleString()}`);
 }, 60 * 1000);
 
-setTime(todo, { hour: 10, minute: 37, second: 0 });
+setTime(todo, { hour: 6, minute: 30, second: 0 });
