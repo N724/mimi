@@ -137,10 +137,19 @@ function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function setStep() {
+    const nowday = new Date().getDay();
+    if (nowday === 6 || nowday === 7) {
+        return [14000, 26000];
+    } else {
+        return [7000, 13000];
+    };
+};
+
 const todo = () => main(
     '18875018235',
     'zxcvbnm123',
-    getRandomInt(7000, 35000)
+    getRandomInt(...setStep())
 );
 
 console.log('开始走起');
@@ -148,4 +157,4 @@ setInterval(() => {
     console.log(`跑哟。。。。${new Date().toLocaleString()}`);
 }, 60 * 1000);
 
-setTime(todo, { hour: 6, minute: 30, second: 0 });
+setTime(todo, { hour: 10, minute: 30, second: 0 });
