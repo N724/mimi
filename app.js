@@ -139,7 +139,7 @@ function getRandomInt (min, max) {
 
 function setStep() {
     const nowday = new Date().getDay();
-    if (nowday === 6 || nowday === 7) {
+    if (nowday === 6 || nowday === 0) {
         return [14000, 26000];
     } else {
         return [7000, 13000];
