@@ -120,7 +120,7 @@ async function main (username, password, step) {
     })
     if (data.message == 'invalid token') {
         console.log('token过期，自动刷新。');
-        await fs.promises.rm(data_file);
+        fs.rmSync(data_file)
         await main(username, password, step);
         return;
     }
@@ -157,4 +157,4 @@ setInterval(() => {
     console.log(`跑哟。。。。${new Date().toLocaleString()}`);
 }, 60 * 1000);
 
-setTime(todo, { hour: 10, minute: 30, second: 0 });
+setTime(todo, { hour: 9, minute: 43, second: 0 });
